@@ -1,0 +1,4 @@
+# Simulated-Network
+Using python and Mininet, I created a small network consisting of three subnets, each with a host, a seperate server, and an untrusted host. The three hosts on the subnets, along with the server, had unique switches, which were all connected to the core switch. The untrusted host was connected directly to the core switch. 
+Several security features were implemented. Only IP traffic was allowed in the network, and all non IP traffic was flooded. If ICMP traffic originates from the untrusted host, it is immediatly dropped, and only IP traffic is allowed between the untrusted host and the subnets. No traffic is allowed between the untrusted host and the server. The subnet hosts and the server are allowed to freely communicate between each other, and all security is implemented in the core switch. 
+This was created for the UCSC CE150 final project. 
